@@ -92,6 +92,7 @@ const shadersDropdown = [
   { name: "Mesh Reflector Material", href: "/meshreflector" },
   { name: "Mesh Wobble Material", href: "/meshwobble" },
   { name: "Mesh Distort Material", href: "/meshdistort" },
+  { name: "Mesh Distort Material2", href: "/meshdistort2" },
 ];
 
 function classNames(...classes) {

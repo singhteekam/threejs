@@ -1,5 +1,5 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 import {
   OrbitControls,
@@ -11,6 +11,8 @@ import {
 } from "@react-three/drei";
 
 import { useState, useEffect, useRef } from "react";
+
+import * as THREE from "three";
 
 const MeshDistortFn = () => {
     const planeRef= useRef();
@@ -27,6 +29,15 @@ const MeshDistortFn = () => {
         }
     }, [hover]);
 
+    // Using lerp method
+    const {lerp}= THREE.MathUtils;
+
+    useFrame(()=>{
+      planeRef.current.material.distort= lerp(planeRef.current.material.distort, hover?0.4:0, 
+        hover?0.05:0.01
+      )
+    })
+
   return (
     <>
       <OrbitControls />
@@ -37,6 +48,11 @@ const MeshDistortFn = () => {
         <MeshDistortMaterial speed={2} distort={0.7}>
           <GradientTexture colors={["aquamarine", "hotpink"]} stops={[0, 1]} />
         </MeshDistortMaterial>
+      </mesh>
+
+      {/* Using lerp method */}
+      <mesh>
+        <meshBasicMaterial color="purple" />
       </mesh>
     </>
   );

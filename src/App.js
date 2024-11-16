@@ -1,6 +1,6 @@
 
 import './App.css';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import Header from './components/Header';
@@ -26,12 +26,13 @@ import PositionalAudioModel from './models/PositionalAudioModel';
 import MeshReflector from './models/Shaders/MeshReflector';
 import MeshWobble from './models/Shaders/MeshWobble';
 import MeshDistort from './models/Shaders/MeshDistort';
+import MeshDistort2 from './models/Shaders/MeshLerpShader';
 
 function App() {
   return (
     // <HomePage />
     <>
-      <HashRouter>
+      <BrowserRouter>
       <Header />
         <main>
           <Routes>
@@ -63,9 +64,10 @@ function App() {
           <Route path="/meshreflector" element={<MeshReflector />} />
           <Route path="/meshwobble" element={<MeshWobble />} />
           <Route path="/meshdistort" element={<MeshDistort />} />
+          <Route path="/meshdistort2" element={<MeshDistort2 />} />
           </Routes>
         </main>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
