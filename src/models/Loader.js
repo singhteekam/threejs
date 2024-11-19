@@ -3,9 +3,11 @@ import React from 'react'
 import * as THREE from "three";
 import { Canvas } from '@react-three/fiber';
 
+import Logo from "./../assets/logo192.png";
+
 const LoaderModel = () => {
 
-    const texture= useLoader(THREE.TextureLoader, "/logo192.png");
+    const texture= useLoader(THREE.TextureLoader, Logo);
 
   return (
     <mesh position={[6, 0, 0]}>

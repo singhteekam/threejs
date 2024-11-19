@@ -3,8 +3,11 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 
+import DogGLB from "./../assets/dog/dog.glb"
+
 const DogModel = () => {
-  const model = useGLTF("/dog/dog.glb");
+  // const model = useGLTF("/dog/dog.glb");
+  const model = useGLTF(DogGLB);
 
   const animations = useAnimations(model.animations, model.scene);
   console.log(animations);
@@ -35,7 +38,7 @@ const DogModel = () => {
   );
 };
 
-useGLTF.preload("/dog/dog.glb");
+useGLTF.preload(DogGLB);
 
 const Dog = () => {
   return (

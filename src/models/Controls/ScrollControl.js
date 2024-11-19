@@ -3,8 +3,10 @@ import Images from "./Images";
 
 import { Canvas } from "@react-three/fiber";
 
+import ScrollImgs from "./../../assets/scrollimages/model.gltf";
+
 const ScrollControlFn = () => {
-  const model = useGLTF("./scrollimages/model.gltf");
+  const model = useGLTF(ScrollImgs);
 
   return (
     <>

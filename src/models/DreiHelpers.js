@@ -14,6 +14,8 @@ import { useRef } from "react";
 
 import { Canvas } from "@react-three/fiber";
 
+import EnvMap from './../assets/envMap/img.hdr';
+
 function DreiHelpersModel() {
   const { sunPosition } = useControls("sky", {
     sunPosition: {
@@ -78,7 +80,8 @@ function DreiHelpersModel() {
 
       <Environment 
     //   background 
-      files={"./envMap/img.hdr"} 
+      // files={"./envMap/img.hdr"} 
+      files={EnvMap} 
         ground={{
             // height:6, radius:60, scale:70
             height:height, radius:radius, scale:scale

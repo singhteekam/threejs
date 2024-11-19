@@ -25,8 +25,11 @@ import {useGLTF} from "@react-three/drei"
 
 import { Canvas } from '@react-three/fiber';
 
+import Computer from "./../assets/desktop_computer/scene.gltf"
+
 const LoaderModel2Fn = () => {
-    const model= useGLTF("/desktop_computer/scene.gltf");
+    // const model= useGLTF("/desktop_computer/scene.gltf");
+    const model= useGLTF(Computer);
     console.log(model);
   return (
     <>
@@ -35,7 +38,7 @@ const LoaderModel2Fn = () => {
   )
 }
 
-useGLTF.preload("/desktop_computer/scene.gltf");
+useGLTF.preload(Computer);
 
 const LoaderModel2 = () => {
   return (

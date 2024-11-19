@@ -6,6 +6,8 @@ import { useRef } from 'react';
 
 import { Canvas } from '@react-three/fiber';
 
+import Logo from "./../assets/logo192.png"
+
 const ParticlesModel = () => {
 
     const particles= useRef();
@@ -15,7 +17,7 @@ const ParticlesModel = () => {
         particles.current.rotation.x+=delta*0.2
     })
 
-    const texture= useLoader(THREE.TextureLoader, "./logo192.png");
+    const texture= useLoader(THREE.TextureLoader, Logo);
 
     const verticesAmt= 2000;
     const positionedArray= new Float32Array(verticesAmt*3);

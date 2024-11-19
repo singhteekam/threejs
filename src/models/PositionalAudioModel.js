@@ -3,6 +3,8 @@ import { OrbitControls, PositionalAudio } from '@react-three/drei'
 
 import { Canvas } from '@react-three/fiber';
 
+import PosAudio from "./../assets/audio/1.mp4"
+
 const PositionalAudioModelFn = () => {
 
     const [play, setPlay]= useState(false);
@@ -12,7 +14,7 @@ const PositionalAudioModelFn = () => {
       <OrbitControls />
 
       {play&& (
-        <PositionalAudio url='/audio/1.mp4' autoplay loop distance={4} />
+        <PositionalAudio url={PosAudio} autoplay loop distance={4} />
       )}
 
       <mesh onClick={()=>setPlay(!play)}>

@@ -3,6 +3,9 @@ import { Canvas } from '@react-three/fiber'
 
 import { OrbitControls, Text, Text3D, Center, Float, Html } from '@react-three/drei'
 
+import Fontttf from "./../assets/fonts/SemiBoldItalic.ttf";
+import Fontjson from "./../assets/fonts/SemiBold_Italic.json"
+
 const Text3DFn = () => {
 
   const cubeRef= useRef();
@@ -14,7 +17,7 @@ const Text3DFn = () => {
       <Text 
         color="black"
         fontSize={0.8}
-        font='./fonts/SemiBoldItalic.ttf'
+        font={Fontttf}
         position-y={1}
         rotation-y={-Math.PI*0.1}
         maxWidth={3}
@@ -26,7 +29,7 @@ const Text3DFn = () => {
       <Center>
         <Float speed={5} floatIntensity={4}>
         <Text3D
-          font='./fonts/SemiBold_Italic.json'
+          font={Fontjson}
           height={1}
           size={0.8}
           letterSpacing={-0.1}

@@ -3,13 +3,15 @@ import { Canvas } from '@react-three/fiber'
 
 import { OrbitControls, MeshReflectorMaterial, Environment } from '@react-three/drei'
 
+import EnvMap from './../../assets/envMap/img.hdr';
+
 const MeshReflectorFn = () => {
   return (
     <>
       <OrbitControls />
       <ambientLight />
 
-      <Environment background files="/envMap/img.hdr" />
+      <Environment background files={EnvMap} />
 
       <mesh>
         <boxGeometry />

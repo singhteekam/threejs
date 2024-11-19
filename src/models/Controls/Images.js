@@ -2,6 +2,13 @@ import { Image, useScroll } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
+import jpg1 from "./../../assets/scrollimages/1.jpg";
+import jpg2 from "./../../assets/scrollimages/2.jpg";
+import jpg3 from "./../../assets/scrollimages/3.jpg";
+import jpg4 from "./../../assets/scrollimages/4.jpg";
+import jpg5 from "./../../assets/scrollimages/5.jpg";
+import jpg6 from "./../../assets/scrollimages/6.jpg";
+
 const Images = () => {
   const { width, height } = useThree((state) => state.viewport);
   const scroll = useScroll();
@@ -24,7 +31,7 @@ const Images = () => {
   return (
     <group ref={groupRef}>
       <Image
-        url="/scrollimages/1.jpg"
+        url={jpg1}
         scale={[4, height, 1]}
         position={[-2, 0, 0]}
         grayscale={0}
@@ -33,24 +40,24 @@ const Images = () => {
       <Image
         position={[-2.3, -height, 2]}
         scale={[1, 3, 1]}
-        url="./scrollimages/2.jpg"
+        url={jpg2}
       />
       <Image
         position={[-0.6, -height, 3]}
         scale={[1, 2, 1]}
-        url="./scrollimages/3.jpg"
+        url={jpg3}
       />
-      <Image position={[0.75, -height, 3.5]} scale={1.5} url="./scrollimages/4.jpg" />
+      <Image position={[0.75, -height, 3.5]} scale={1.5} url={jpg4} />
       <Image
         position={[0, -height * 1.5, 2.5]}
         scale={[1.5, 3, 1]}
-        url="./scrollimages/5.jpg"
+        url={jpg5}
         grayscale={1}
       />
       <Image
         position={[0, -height * 2 - height / 4, 0]}
         scale={[width, height / 2, 1]}
-        url="./scrollimages/6.jpg"
+        url={jpg6}
       />
     </group>
   );

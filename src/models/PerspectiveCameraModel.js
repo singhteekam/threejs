@@ -12,6 +12,8 @@ import {
 
 import { Canvas } from "@react-three/fiber";
 
+import EnvMap from './../assets/envMap/img.hdr';
+
 const PerspectiveCameraModelFn = () => {
   return (
     <>
@@ -21,7 +23,7 @@ const PerspectiveCameraModelFn = () => {
 
       <Environment
           background
-        files={"/envMap/img.hdr"}
+        files={EnvMap}
       />
 
       <mesh>
